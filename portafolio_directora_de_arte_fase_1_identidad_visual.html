@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirección de Arte y estrategia creativa</title>
+    <!-- Google Fonts: Outfit (Futura Style) & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        petroleum: {
+                            deep: '#07252C',
+                            dark: '#0D3B45',
+                            card: '#124855',
+                            border: '#1E5866'
+                        },
+                        acid: '#D4FF00',
+                        lightGrey: '#D0E1E5'
+                    },
+                    fontFamily: {
+                        futura: ['Outfit', 'sans-serif'],
+                        body: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #07252C;
+            color: #FFFFFF;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3, h4, .font-futura {
+            font-family: 'Outfit', sans-serif;
+        }
+        .feed-card {
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+        }
+        .feed-card:hover {
+            transform: translateY(-6px);
+            border-color: #D4FF00;
+        }
+        /* Gestión de visibilidad de secciones independientes */
+        .app-section {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .app-section.active-section {
+            display: block;
+            opacity: 1;
+        }
+        /* Estilos de navegación activa */
+        .nav-link.active {
+            color: #D4FF00;
+            border-bottom: 2px solid #D4FF00;
+            padding-bottom: 4px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-petroleum-deep text-white antialiased selection:bg-acid selection:text-black">
+
+    <header class="sticky top-0 z-50 bg-petroleum-deep/95 backdrop-blur-md border-b border-petroleum-border px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo / Nombre que vuelve a Inicio -->
+            <a href="#campana" class="flex items-center space-x-3 group">
+                <span class="w-3 h-3 rounded-full bg-acid inline-block group-hover:scale-125 transition-transform"></span>
+                <span class="font-futura font-bold text-lg tracking-wider uppercase">DIRECTORA DE ARTE</span>
+            </a>
+
+            <!-- Menú navegación principal -->
+            <nav class="flex items-center space-x-6 sm:space-x-8 text-sm font-medium tracking-wide">
+                <a href="#sobre-mi" data-nav="sobre-mi" class="nav-link text-lightGrey hover:text-acid transition-colors">Sobre mí</a>
+                <a href="#campana" data-nav="campana" class="nav-link text-lightGrey hover:text-acid transition-colors">Campaña</a>
+                <a href="#contacto" data-nav="contacto" class="nav-link text-lightGrey hover:text-acid transition-colors">Contacto</a>
+                <a href="#dame-mas" data-nav="dame-mas" class="px-3.5 py-1.5 bg-acid text-black font-futura font-bold text-xs rounded-lg hover:bg-white transition-colors">
+                    Dame más
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTAINER PRINCIPAL DE PÁGINAS INDEPENDIENTES -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-6 py-10">
+
+        <section id="sec-campana" class="app-section space-y-12">
+            <!-- TITULAR PRINCIPAL REQUERIDO -->
+            <div class="border-b border-petroleum-border pb-10 pt-4">
+                <h1 class="font-futura font-extrabold text-4xl sm:text-6xl lg:text-7xl tracking-tight leading-tight max-w-5xl">
+                    Dirección de Arte y estrategia creativa
+                </h1>
+            </div>
+
+            <div class="flex justify-between items-center border-b border-petroleum-border/50 pb-4">
+                <span class="text-xs font-mono text-acid uppercase tracking-widest">FEED DE PROYECTOS</span>
+                <span class="text-xs font-mono text-lightGrey">8 CASOS DE ESTUDIO INDEPENDIENTES</span>
+            </div>
+
+            <!-- GRID DE 8 TARJETAS QUE ENLAZAN A PÁGINAS DEDICADAS -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+
+                <!-- TARJETA 1 -->
+                <article class="feed-card bg-petroleum-dark rounded-2xl border border-petroleum-border overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-64 bg-petroleum-card border-b border-petroleum-border flex flex-col justify-between p-6 overflow-hidden">
+                            <div class="flex justify-between items-start z-10">
+                                <span class="bg-acid text-black font-mono font-bold text-xs px-2.5 py-1 rounded uppercase">CAMPAÑA 360°</span>
+                                <span class="text-xs font-mono text-lightGrey bg-petroleum-deep/80 px-2.5 py-1 rounded">01</span>
+                            </div>
+                            <div class="z-10">
+                                <h4 class="font-futura font-bold text-2xl text-white">Visual Identity & Rebranding</h4>
+                            </div>
+                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4FF00_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <h3 class="font-futura font-bold text-2xl text-white">Campaña 1</h3>
+                            <p class="text-lightGrey text-sm leading-relaxed">Estrategia global, rebranding y despliegue para gran marca del sector retail.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <a href="#campana-1" class="w-full py-3 px-4 bg-acid text-black font-futura font-bold text-sm rounded-xl hover:bg-white transition-colors flex items-center justify-center space-x-2">
+                            <span>VER CAMPAÑA</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TARJETA 2 -->
+                <article class="feed-card bg-petroleum-dark rounded-2xl border border-petroleum-border overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-64 bg-petroleum-card border-b border-petroleum-border flex flex-col justify-between p-6 overflow-hidden">
+                            <div class="flex justify-between items-start z-10">
+                                <span class="bg-acid text-black font-mono font-bold text-xs px-2.5 py-1 rounded uppercase">SPOT & TV</span>
+                                <span class="text-xs font-mono text-lightGrey bg-petroleum-deep/80 px-2.5 py-1 rounded">02</span>
+                            </div>
+                            <div class="z-10">
+                                <h4 class="font-futura font-bold text-2xl text-white">Film Direction & Narrative</h4>
+                            </div>
+                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4FF00_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <h3 class="font-futura font-bold text-2xl text-white">Campaña 2</h3>
+                            <p class="text-lightGrey text-sm leading-relaxed">Dirección de arte para pieza televisiva de gran alcance y campaña nacional.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <a href="#campana-2" class="w-full py-3 px-4 bg-acid text-black font-futura font-bold text-sm rounded-xl hover:bg-white transition-colors flex items-center justify-center space-x-2">
+                            <span>VER CAMPAÑA</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TARJETA 3 -->
+                <article class="feed-card bg-petroleum-dark rounded-2xl border border-petroleum-border overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-64 bg-petroleum-card border-b border-petroleum-border flex flex-col justify-between p-6 overflow-hidden">
+                            <div class="flex justify-between items-start z-10">
+                                <span class="bg-acid text-black font-mono font-bold text-xs px-2.5 py-1 rounded uppercase">SOCIAL MEDIA</span>
+                                <span class="text-xs font-mono text-lightGrey bg-petroleum-deep/80 px-2.5 py-1 rounded">03</span>
+                            </div>
+                            <div class="z-10">
+                                <h4 class="font-futura font-bold text-2xl text-white">Digital System & Content</h4>
+                            </div>
+                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4FF00_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <h3 class="font-futura font-bold text-2xl text-white">Campaña 3</h3>
+                            <p class="text-lightGrey text-sm leading-relaxed">Estrategia y contenidos dinámicos adaptados a redes sociales y plataformas digitales.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <a href="#campana-3" class="w-full py-3 px-4 bg-acid text-black font-futura font-bold text-sm rounded-xl hover:bg-white transition-colors flex items-center justify-center space-x-2">
+                            <span>VER CAMPAÑA</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TARJETA 4 -->
+                <article class="feed-card bg-petroleum-dark rounded-2xl border border-petroleum-border overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-64 bg-petroleum-card border-b border-petroleum-border flex flex-col justify-between p-6 overflow-hidden">
+                            <div class="flex justify-between items-start z-10">
+                                <span class="bg-acid text-black font-mono font-bold text-xs px-2.5 py-1 rounded uppercase">BRANDING</span>
+                                <span class="text-xs font-mono text-lightGrey bg-petroleum-deep/80 px-2.5 py-1 rounded">04</span>
+                            </div>
+                            <div class="z-10">
+                                <h4 class="font-futura font-bold text-2xl text-white">Brand Architecture</h4>
+                            </div>
+                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4FF00_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <h3 class="font-futura font-bold text-2xl text-white">Campaña 4</h3>
+                            <p class="text-lightGrey text-sm leading-relaxed">Creación de universo de marca, tipografías a medida y manual de estilo global.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <a href="#campana-4" class="w-full py-3 px-4 bg-acid text-black font-futura font-bold text-sm rounded-xl hover:bg-white transition-colors flex items-center justify-center space-x-2">
+                            <span>VER CAMPAÑA</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TARJETA 5 -->
+                <article class="feed-card bg-petroleum-dark rounded-2xl border border-petroleum-border overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-64 bg-petroleum-card border-b border-petroleum-border flex flex-col justify-between p-6 overflow-hidden">
+                            <div class="flex justify-between items-start z-10">
+                                <span class="bg-acid text-black font-mono font-bold text-xs px-2.5 py-1 rounded uppercase">OOH & EXTERIOR</span>
+                                <span class="text-xs font-mono text-lightGrey bg-petroleum-deep/80 px-2.5 py-1 rounded">05</span>
+                            </div>
+                            <div class="z-10">
+                                <h4 class="font-futura font-bold text-2xl text-white">Large Format Spaces</h4>
+                            </div>
+                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4FF00_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <h3 class="font-futura font-bold text-2xl text-white">Campaña 5</h3>
+                            <p class="text-lightGrey text-sm leading-relaxed">Dirección de arte para lonas urbanas, mupi interactivo y activaciones en calle.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <a href="#campana-5" class="w-full py-3 px-4 bg-acid text-black font-futura font-bold text-sm rounded-xl hover:bg-white transition-colors flex items-center justify-center space-x-2">
+                            <span>VER CAMPAÑA</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TARJETA 6 -->
+                <article class="feed-card bg-petroleum-dark rounded-2xl border border-petroleum-border overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-64 bg-petroleum-card border-b border-petroleum-border flex flex-col justify-between p-6 overflow-hidden">
+                            <div class="flex justify-between items-start z-10">
+                                <span class="bg-acid text-black font-mono font-bold text-xs px-2.5 py-1 rounded uppercase">LANZAMIENTO</span>
+                                <span class="text-xs font-mono text-lightGrey bg-petroleum-deep/80 px-2.5 py-1 rounded">06</span>
+                            </div>
+                            <div class="z-10">
+                                <h4 class="font-futura font-bold text-2xl text-white">Product Key Visuals</h4>
+                            </div>
+                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4FF00_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <h3 class="font-futura font-bold text-2xl text-white">Campaña 6</h3>
+                            <p class="text-lightGrey text-sm leading-relaxed">Producción fotográfica de producto y Key Visuals de alto impacto comercial.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <a href="#campana-6" class="w-full py-3 px-4 bg-acid text-black font-futura font-bold text-sm rounded-xl hover:bg-white transition-colors flex items-center justify-center space-x-2">
+                            <span>VER CAMPAÑA</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TARJETA 7 -->
+                <article class="feed-card bg-petroleum-dark rounded-2xl border border-petroleum-border overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-64 bg-petroleum-card border-b border-petroleum-border flex flex-col justify-between p-6 overflow-hidden">
+                            <div class="flex justify-between items-start z-10">
+                                <span class="bg-acid text-black font-mono font-bold text-xs px-2.5 py-1 rounded uppercase">DIGITAL STRATEGY</span>
+                                <span class="text-xs font-mono text-lightGrey bg-petroleum-deep/80 px-2.5 py-1 rounded">07</span>
+                            </div>
+                            <div class="z-10">
+                                <h4 class="font-futura font-bold text-2xl text-white">Interactive Campaign</h4>
+                            </div>
+                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4FF00_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <h3 class="font-futura font-bold text-2xl text-white">Campaña 7</h3>
+                            <p class="text-lightGrey text-sm leading-relaxed">Estrategia e innovación visual para plataformas interactivas y campañas digitales.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <a href="#campana-7" class="w-full py-3 px-4 bg-acid text-black font-futura font-bold text-sm rounded-xl hover:bg-white transition-colors flex items-center justify-center space-x-2">
+                            <span>VER CAMPAÑA</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TARJETA 8 -->
+                <article class="feed-card bg-petroleum-dark rounded-2xl border border-petroleum-border overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-64 bg-petroleum-card border-b border-petroleum-border flex flex-col justify-between p-6 overflow-hidden">
+                            <div class="flex justify-between items-start z-10">
+                                <span class="bg-acid text-black font-mono font-bold text-xs px-2.5 py-1 rounded uppercase">ALWAYS ON</span>
+                                <span class="text-xs font-mono text-lightGrey bg-petroleum-deep/80 px-2.5 py-1 rounded">08</span>
+                            </div>
+                            <div class="z-10">
+                                <h4 class="font-futura font-bold text-2xl text-white">Ecosystem Management</h4>
+                            </div>
+                            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4FF00_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <h3 class="font-futura font-bold text-2xl text-white">Campaña 8</h3>
+                            <p class="text-lightGrey text-sm leading-relaxed">Dirección de arte continuada y supervisión de piezas para múltiples soportes.</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2">
+                        <a href="#campana-8" class="w-full py-3 px-4 bg-acid text-black font-futura font-bold text-sm rounded-xl hover:bg-white transition-colors flex items-center justify-center space-x-2">
+                            <span>VER CAMPAÑA</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="sec-sobre-mi" class="app-section space-y-12">
+            <div class="border-b border-petroleum-border pb-8">
+                <span class="text-xs font-mono text-acid uppercase tracking-widest">SECCIÓN / PERFIL PROFESIONAL</span>
+                <h1 class="font-futura font-extrabold text-4xl sm:text-6xl text-white mt-2">Sobre mí</h1>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2 space-y-8">
+                    <p class="text-xl sm:text-2xl text-lightGrey leading-relaxed font-light">
+                        Soy <strong class="text-white font-medium">Directora de Arte y Estratega Creativa</strong>. Lidero el proceso creativo completo desde la estrategia y la narrativa de marca hasta el diseño de la última pieza en campañas 360°, spots de TV y contenido social media.
+                    </p>
+                    
+                    <div class="space-y-6 text-lightGrey leading-relaxed text-base">
+                        <p>
+                            Mi trabajo se enfoca en conectar los objetivos del negocio con soluciones estéticas rotundas, limpias y altamente eficaces. Mi trayectoria me permite dirigir equipos multidisciplinares, coordinar producciones complejas y mantener la coherencia visual en todos los puntos de contacto.
+                        </p>
+                    </div>
+
+                    <div class="pt-6 border-t border-petroleum-border">
+                        <h3 class="font-futura font-bold text-xl text-white mb-6">Áreas de Especialización</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="p-5 bg-petroleum-dark rounded-xl border border-petroleum-border">
+                                <span class="text-acid font-mono text-xs block mb-1">01 / ESTRATEGIA</span>
+                                <h4 class="font-futura font-bold text-lg text-white">Estrategia Creativa</h4>
+                                <p class="text-xs text-lightGrey mt-2">Concepto de campaña, insights y tono de comunicación.</p>
+                            </div>
+                            <div class="p-5 bg-petroleum-dark rounded-xl border border-petroleum-border">
+                                <span class="text-acid font-mono text-xs block mb-1">02 / FILM</span>
+                                <h4 class="font-futura font-bold text-lg text-white">Dirección de Arte Audiovisual</h4>
+                                <p class="text-xs text-lightGrey mt-2">Spots de televisión, tratamiento visual y supervisión en rodaje.</p>
+                            </div>
+                            <div class="p-5 bg-petroleum-dark rounded-xl border border-petroleum-border">
+                                <span class="text-acid font-mono text-xs block mb-1">03 / SOCIAL</span>
+                                <h4 class="font-futura font-bold text-lg text-white">RRSS & Ecosistemas Digitales</h4>
+                                <p class="text-xs text-lightGrey mt-2">Contenidos nativos, formatos verticales y activaciones.</p>
+                            </div>
+                            <div class="p-5 bg-petroleum-dark rounded-xl border border-petroleum-border">
+                                <span class="text-acid font-mono text-xs block mb-1">04 / BRANDING</span>
+                                <h4 class="font-futura font-bold text-lg text-white">Identidad Visual 360°</h4>
+                                <p class="text-xs text-lightGrey mt-2">Universos de marca, Key Visuals y sistemas gráficos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-petroleum-dark p-8 rounded-2xl border border-petroleum-border h-fit space-y-6">
+                    <h3 class="font-futura font-bold text-xl text-white">Metodología de Trabajo</h3>
+                    <ul class="space-y-4 text-sm text-lightGrey">
+                        <li class="flex items-start space-x-3">
+                            <span class="text-acid font-mono font-bold">•</span>
+                            <span><strong>Investigación & Insight:</strong> Entender el problema antes de proponer estética.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-acid font-mono font-bold">•</span>
+                            <span><strong>Concepto Central:</strong> Una idea clara capaz de sostener cualquier formato.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-acid font-mono font-bold">•</span>
+                            <span><strong>Ejecución Limpia:</strong> Cuidado de la tipografía, color y composición.</span>
+                        </li>
+                    </ul>
+                    <div class="pt-4 border-t border-petroleum-border">
+                        <a href="#contacto" class="block w-full text-center py-3 bg-acid text-black font-futura font-bold text-sm rounded-xl hover:bg-white transition-colors">
+                            INICIAR CONVERSACIÓN
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-contacto" class="app-section space-y-12">
+            <div class="border-b border-petroleum-border pb-8">
+                <span class="text-xs font-mono text-acid uppercase tracking-widest">SECCIÓN / CONTACTO DIRECTO</span>
+                <h1 class="font-futura font-extrabold text-4xl sm:text-6xl text-white mt-2">Contacto</h1>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <p class="text-xl text-lightGrey leading-relaxed">
+                        ¿Tienes un nuevo proyecto, un lanzamiento de marca o necesitas liderazgo de arte para tu próxima campaña?
+                    </p>
+                    <div class="space-y-4 pt-4">
+                        <div class="p-6 bg-petroleum-dark rounded-2xl border border-petroleum-border space-y-1">
+                            <span class="text-xs font-mono text-acid uppercase">CORREO ELECTRÓNICO</span>
+                            <p class="text-xl font-futura font-bold text-white">hola@directoradearte.com</p>
+                        </div>
+                        <div class="p-6 bg-petroleum-dark rounded-2xl border border-petroleum-border space-y-1">
+                            <span class="text-xs font-mono text-acid uppercase">UBICACIÓN</span>
+                            <p class="text-xl font-futura font-bold text-white">Madrid / Disponible Worldwide</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORMULARIO DE CONTACTO SIMULADO -->
+                <form onsubmit="event.preventDefault(); alert('Mensaje enviado correctamente');" class="bg-petroleum-dark p-8 rounded-2xl border border-petroleum-border space-y-5">
+                    <h3 class="font-futura font-bold text-xl text-white">Envía un mensaje</h3>
+                    <div>
+                        <label class="block text-xs font-mono text-lightGrey uppercase mb-2">Nombre completo</label>
+                        <input type="text" placeholder="Tu nombre" required class="w-full bg-petroleum-deep border border-petroleum-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-acid text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono text-lightGrey uppercase mb-2">Email de contacto</label>
+                        <input type="email" placeholder="tu@email.com" required class="w-full bg-petroleum-deep border border-petroleum-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-acid text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-mono text-lightGrey uppercase mb-2">Detalles del proyecto</label>
+                        <textarea rows="4" placeholder="Háblame de la campaña, timing y necesidades..." required class="w-full bg-petroleum-deep border border-petroleum-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-acid text-sm"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3.5 bg-acid text-black font-futura font-bold text-sm rounded-xl hover:bg-white transition-colors">
+                        ENVIAR MENSAJE
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section id="sec-dame-mas" class="app-section space-y-12">
+            <div class="border-b border-petroleum-border pb-8">
+                <span class="text-xs font-mono text-acid uppercase tracking-widest">SECCIÓN / LABORATORIO Y RECURSOS</span>
+                <h1 class="font-futura font-extrabold text-4xl sm:text-6xl text-white mt-2">Dame más</h1>
+            </div>
+
+            <p class="text-xl text-lightGrey max-w-3xl">
+                Un espacio dedicado a exploraciones visuales, investigación de tendencias, tratamientos creativos y proyectos paralelos fuera del circuito comercial tradicional.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-4">
+                    <span class="text-xs font-mono text-acid">01 / TENDENCIAS</span>
+                    <h3 class="font-futura font-bold text-xl text-white">Visual Trends 2026</h3>
+                    <p class="text-sm text-lightGrey">Investigación sobre paletas cromáticas, tipografía emergente y narrativa sintética para marcas de vanguardia.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-4">
+                    <span class="text-xs font-mono text-acid">02 / EXPERIMENTAL</span>
+                    <h3 class="font-futura font-bold text-xl text-white">Creative Lab</h3>
+                    <p class="text-sm text-lightGrey">Pruebas conceptuales, diseño 3D, animación tipográfica y piezas gráficas no publicadas.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-4">
+                    <span class="text-xs font-mono text-acid">03 / TRATAMIENTOS</span>
+                    <h3 class="font-futura font-bold text-xl text-white">Pitch Decks & Treatments</h3>
+                    <p class="text-sm text-lightGrey">Muestra de tratamientos visuales desarrollados para ganar concursos de grandes marcas.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- VISTA INDEPENDIENTE CAMPAÑA 1 -->
+        <section id="sec-campana-1" class="app-section space-y-10">
+            <div class="flex justify-between items-center border-b border-petroleum-border pb-6">
+                <a href="#campana" class="inline-flex items-center space-x-2 text-acid hover:text-white font-mono text-xs transition-colors">
+                    <span>← VOLVER A TODAS LAS CAMPAÑAS</span>
+                </a>
+                <span class="text-xs font-mono text-lightGrey">CAMPAÑA 01 / 08</span>
+            </div>
+
+            <div class="space-y-4">
+                <span class="bg-acid text-black font-mono font-bold text-xs px-3 py-1 rounded uppercase">CAMPAÑA 360°</span>
+                <h1 class="font-futura font-extrabold text-4xl sm:text-6xl text-white">Campaña 1: Visual Identity & Rebranding</h1>
+                <p class="text-lg text-lightGrey">Cliente: Marca Global Retail | Rol: Dirección de Arte & Estrategia Creativa</p>
+            </div>
+
+            <!-- HERO VISUAL DE LA CAMPAÑA 1 -->
+            <div class="h-96 bg-petroleum-card rounded-2xl border border-petroleum-border flex flex-col items-center justify-center p-8 text-center relative overflow-hidden">
+                <span class="font-mono text-xs text-acid mb-2">[ CONTENEDOR AUDIOVISUAL / HERO IMAGE CAMPAÑA 01 ]</span>
+                <h3 class="font-futura font-bold text-3xl text-white">Lanzamiento Global 360°</h3>
+                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4FF00_1px,transparent_1px)] [background-size:20px_20px]"></div>
+            </div>
+
+            <!-- DETALLES ESTRUCTURADOS -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">01. Concepto Estratégico</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Definición de la nueva narrativa visual basada en la simplicidad y la elegancia cromática para conectar con una nueva audiencia digital.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">02. Despliegue de Piezas</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Producción de spot de TV de 30", serie de 12 piezas para Instagram y TikTok, y circuito nacional OOH en grandes ciudades.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">03. Resultados</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Incremento del 40% en recuerdo de marca y posicionamiento como referente estético del sector durante la temporada.</p>
+                </div>
+            </div>
+
+            <!-- NAVEGACIÓN ENTRE CAMPAÑAS -->
+            <div class="flex justify-between items-center pt-8 border-t border-petroleum-border font-mono text-xs">
+                <a href="#campana-8" class="text-lightGrey hover:text-acid">← CAMPAÑA 8</a>
+                <a href="#campana-2" class="text-acid hover:text-white">CAMPAÑA 2 →</a>
+            </div>
+        </section>
+
+        <!-- VISTA INDEPENDIENTE CAMPAÑA 2 -->
+        <section id="sec-campana-2" class="app-section space-y-10">
+            <div class="flex justify-between items-center border-b border-petroleum-border pb-6">
+                <a href="#campana" class="inline-flex items-center space-x-2 text-acid hover:text-white font-mono text-xs transition-colors">
+                    <span>← VOLVER A TODAS LAS CAMPAÑAS</span>
+                </a>
+                <span class="text-xs font-mono text-lightGrey">CAMPAÑA 02 / 08</span>
+            </div>
+
+            <div class="space-y-4">
+                <span class="bg-acid text-black font-mono font-bold text-xs px-3 py-1 rounded uppercase">SPOT & TV</span>
+                <h1 class="font-futura font-extrabold text-4xl sm:text-6xl text-white">Campaña 2: Film Direction & Narrative</h1>
+                <p class="text-lg text-lightGrey">Cliente: Automoción / Movilidad | Rol: Dirección de Arte Audiovisual</p>
+            </div>
+
+            <div class="h-96 bg-petroleum-card rounded-2xl border border-petroleum-border flex flex-col items-center justify-center p-8 text-center relative overflow-hidden">
+                <span class="font-mono text-xs text-acid mb-2">[ REEL SPOT TV / FILM DIRECTION ]</span>
+                <h3 class="font-futura font-bold text-3xl text-white">Narrativa Audiovisual TV</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">01. Concepto Estratégico</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Construcción de un tratamiento de color cinematográfico y ritmo dinámico para televisión nacional.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">02. Despliegue de Piezas</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Spot principal 45", adaptaciones de 20" y 10" para bumpers digitales y plataformas bajo demanda.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">03. Resultados</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Premio a la mejor dirección de arte en festival del sector y máximo alcance de audiencia.</p>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center pt-8 border-t border-petroleum-border font-mono text-xs">
+                <a href="#campana-1" class="text-lightGrey hover:text-acid">← CAMPAÑA 1</a>
+                <a href="#campana-3" class="text-acid hover:text-white">CAMPAÑA 3 →</a>
+            </div>
+        </section>
+
+        <!-- VISTA INDEPENDIENTE CAMPAÑA 3 -->
+        <section id="sec-campana-3" class="app-section space-y-10">
+            <div class="flex justify-between items-center border-b border-petroleum-border pb-6">
+                <a href="#campana" class="inline-flex items-center space-x-2 text-acid hover:text-white font-mono text-xs transition-colors">
+                    <span>← VOLVER A TODAS LAS CAMPAÑAS</span>
+                </a>
+                <span class="text-xs font-mono text-lightGrey">CAMPAÑA 03 / 08</span>
+            </div>
+
+            <div class="space-y-4">
+                <span class="bg-acid text-black font-mono font-bold text-xs px-3 py-1 rounded uppercase">SOCIAL MEDIA</span>
+                <h1 class="font-futura font-extrabold text-4xl sm:text-6xl text-white">Campaña 3: Digital System & Content</h1>
+                <p class="text-lg text-lightGrey">Cliente: Beauty & Lifestyle | Rol: Estrategia Visual Digital</p>
+            </div>
+
+            <div class="h-96 bg-petroleum-card rounded-2xl border border-petroleum-border flex flex-col items-center justify-center p-8 text-center relative">
+                <span class="font-mono text-xs text-acid mb-2">[ GRID INTERACTIVO / ASSETS DIGITALES ]</span>
+                <h3 class="font-futura font-bold text-3xl text-white">Contenido Social Media</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">01. Concepto Estratégico</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Creación de un lenguaje nativo para plataformas móviles centrado en micro-interacciones visuales.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">02. Despliegue de Piezas</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Más de 30 piezas adaptadas a Stories, Reels y activaciones con creadores de contenido.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">03. Resultados</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Multiplicación x3 del engagement orgánico respecto a campañas anteriores.</p>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center pt-8 border-t border-petroleum-border font-mono text-xs">
+                <a href="#campana-2" class="text-lightGrey hover:text-acid">← CAMPAÑA 2</a>
+                <a href="#campana-4" class="text-acid hover:text-white">CAMPAÑA 4 →</a>
+            </div>
+        </section>
+
+        <!-- VISTA INDEPENDIENTE CAMPAÑA 4 -->
+        <section id="sec-campana-4" class="app-section space-y-10">
+            <div class="flex justify-between items-center border-b border-petroleum-border pb-6">
+                <a href="#campana" class="inline-flex items-center space-x-2 text-acid hover:text-white font-mono text-xs transition-colors">
+                    <span>← VOLVER A TODAS LAS CAMPAÑAS</span>
+                </a>
+                <span class="text-xs font-mono text-lightGrey">CAMPAÑA 04 / 08</span>
+            </div>
+
+            <div class="space-y-4">
+                <span class="bg-acid text-black font-mono font-bold text-xs px-3 py-1 rounded uppercase">BRANDING</span>
+                <h1 class="font-futura font-extrabold text-4xl sm:text-6xl text-white">Campaña 4: Brand Architecture</h1>
+                <p class="text-lg text-lightGrey">Cliente: Marca de Tecnología | Rol: Dirección de Diseño & Branding</p>
+            </div>
+
+            <div class="h-96 bg-petroleum-card rounded-2xl border border-petroleum-border flex flex-col items-center justify-center p-8 text-center relative">
+                <span class="font-mono text-xs text-acid mb-2">[ BRAND MANUAL / BRANDING SYSTEM ]</span>
+                <h3 class="font-futura font-bold text-3xl text-white">Sistema de Identidad Visual</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">01. Concepto Estratégico</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Arquitectura de marca coherente y flexible para escalabilidad internacional.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">02. Despliegue de Piezas</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Guía gráfica de 120 páginas, tipografía corporativa personalizada y guidelines digitales.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">03. Resultados</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Implementación exitosa en 5 países con máxima consistencia de marca.</p>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center pt-8 border-t border-petroleum-border font-mono text-xs">
+                <a href="#campana-3" class="text-lightGrey hover:text-acid">← CAMPAÑA 3</a>
+                <a href="#campana-5" class="text-acid hover:text-white">CAMPAÑA 5 →</a>
+            </div>
+        </section>
+
+        <!-- VISTA INDEPENDIENTE CAMPAÑA 5 -->
+        <section id="sec-campana-5" class="app-section space-y-10">
+            <div class="flex justify-between items-center border-b border-petroleum-border pb-6">
+                <a href="#campana" class="inline-flex items-center space-x-2 text-acid hover:text-white font-mono text-xs transition-colors">
+                    <span>← VOLVER A TODAS LAS CAMPAÑAS</span>
+                </a>
+                <span class="text-xs font-mono text-lightGrey">CAMPAÑA 05 / 08</span>
+            </div>
+
+            <div class="space-y-4">
+                <span class="bg-acid text-black font-mono font-bold text-xs px-3 py-1 rounded uppercase">OOH & EXTERIOR</span>
+                <h1 class="font-futura font-extrabold text-4xl sm:text-6xl text-white">Campaña 5: Large Format Spaces</h1>
+                <p class="text-lg text-lightGrey">Cliente: Gran Consumo | Rol: Dirección de Arte Exterior</p>
+            </div>
+
+            <div class="h-96 bg-petroleum-card rounded-2xl border border-petroleum-border flex flex-col items-center justify-center p-8 text-center relative">
+                <span class="font-mono text-xs text-acid mb-2">[ OUTDOOR SHOWCASE / MOCKUP LONAS ]</span>
+                <h3 class="font-futura font-bold text-3xl text-white">Impacto en Gran Formato</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">01. Concepto Estratégico</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Visuales de alto contraste diseñados para captar la atención en entornos urbanos saturados.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">02. Despliegue de Piezas</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Lonas gigantes en centros urbanos, mupis digitales dinámicos y vinilado integral.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">03. Resultados</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Amplia repercusión orgánica en redes sociales por la espectacularidad del soporte.</p>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center pt-8 border-t border-petroleum-border font-mono text-xs">
+                <a href="#campana-4" class="text-lightGrey hover:text-acid">← CAMPAÑA 4</a>
+                <a href="#campana-6" class="text-acid hover:text-white">CAMPAÑA 6 →</a>
+            </div>
+        </section>
+
+        <!-- VISTA INDEPENDIENTE CAMPAÑA 6 -->
+        <section id="sec-campana-6" class="app-section space-y-10">
+            <div class="flex justify-between items-center border-b border-petroleum-border pb-6">
+                <a href="#campana" class="inline-flex items-center space-x-2 text-acid hover:text-white font-mono text-xs transition-colors">
+                    <span>← VOLVER A TODAS LAS CAMPAÑAS</span>
+                </a>
+                <span class="text-xs font-mono text-lightGrey">CAMPAÑA 06 / 08</span>
+            </div>
+
+            <div class="space-y-4">
+                <span class="bg-acid text-black font-mono font-bold text-xs px-3 py-1 rounded uppercase">LANZAMIENTO</span>
+                <h1 class="font-futura font-extrabold text-4xl sm:text-6xl text-white">Campaña 6: Product Key Visuals</h1>
+                <p class="text-lg text-lightGrey">Cliente: Moda & Calzado | Rol: Dirección Creativa de Fotografía</p>
+            </div>
+
+            <div class="h-96 bg-petroleum-card rounded-2xl border border-petroleum-border flex flex-col items-center justify-center p-8 text-center relative">
+                <span class="font-mono text-xs text-acid mb-2">[ PRODUCT PHOTOGRAPHY / KEY VISUALS ]</span>
+                <h3 class="font-futura font-bold text-3xl text-white">Lanzamiento de Producto</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">01. Concepto Estratégico</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Dirección de arte fotográfica enfocada en resaltar texturas, iluminación sofisticada y personalidad.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">02. Despliegue de Piezas</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Key visuals principales para catálogo, punto de venta y campaña digital de lanzamiento.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">03. Resultados</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Agotado el stock inicial de producto en las primeras dos semanas de lanzamiento.</p>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center pt-8 border-t border-petroleum-border font-mono text-xs">
+                <a href="#campana-5" class="text-lightGrey hover:text-acid">← CAMPAÑA 5</a>
+                <a href="#campana-7" class="text-acid hover:text-white">CAMPAÑA 7 →</a>
+            </div>
+        </section>
+
+        <!-- VISTA INDEPENDIENTE CAMPAÑA 7 -->
+        <section id="sec-campana-7" class="app-section space-y-10">
+            <div class="flex justify-between items-center border-b border-petroleum-border pb-6">
+                <a href="#campana" class="inline-flex items-center space-x-2 text-acid hover:text-white font-mono text-xs transition-colors">
+                    <span>← VOLVER A TODAS LAS CAMPAÑAS</span>
+                </a>
+                <span class="text-xs font-mono text-lightGrey">CAMPAÑA 07 / 08</span>
+            </div>
+
+            <div class="space-y-4">
+                <span class="bg-acid text-black font-mono font-bold text-xs px-3 py-1 rounded uppercase">DIGITAL STRATEGY</span>
+                <h1 class="font-futura font-extrabold text-4xl sm:text-6xl text-white">Campaña 7: Interactive Campaign</h1>
+                <p class="text-lg text-lightGrey">Cliente: Entretenimiento | Rol: Dirección de Arte Interactiva</p>
+            </div>
+
+            <div class="h-96 bg-petroleum-card rounded-2xl border border-petroleum-border flex flex-col items-center justify-center p-8 text-center relative">
+                <span class="font-mono text-xs text-acid mb-2">[ INTERACTIVE EXPERIENCE SHOWCASE ]</span>
+                <h3 class="font-futura font-bold text-3xl text-white">Experiencia Digital Interactiva</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">01. Concepto Estratégico</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Diseño de experiencia inmersiva para conectar con la audiencia a través del juego y la participación.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">02. Despliegue de Piezas</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Sitio web interactivo, filtros de realidad aumentada y campaña de captación en redes.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">03. Resultados</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Más de 500,000 interacciones únicas durante la primera semana activa.</p>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center pt-8 border-t border-petroleum-border font-mono text-xs">
+                <a href="#campana-6" class="text-lightGrey hover:text-acid">← CAMPAÑA 6</a>
+                <a href="#campana-8" class="text-acid hover:text-white">CAMPAÑA 8 →</a>
+            </div>
+        </section>
+
+        <!-- VISTA INDEPENDIENTE CAMPAÑA 8 -->
+        <section id="sec-campana-8" class="app-section space-y-10">
+            <div class="flex justify-between items-center border-b border-petroleum-border pb-6">
+                <a href="#campana" class="inline-flex items-center space-x-2 text-acid hover:text-white font-mono text-xs transition-colors">
+                    <span>← VOLVER A TODAS LAS CAMPAÑAS</span>
+                </a>
+                <span class="text-xs font-mono text-lightGrey">CAMPAÑA 08 / 08</span>
+            </div>
+
+            <div class="space-y-4">
+                <span class="bg-acid text-black font-mono font-bold text-xs px-3 py-1 rounded uppercase">ALWAYS ON</span>
+                <h1 class="font-futura font-extrabold text-4xl sm:text-6xl text-white">Campaña 8: Ecosystem Management</h1>
+                <p class="text-lg text-lightGrey">Cliente: Servicios Financieros | Rol: Dirección de Arte Continua</p>
+            </div>
+
+            <div class="h-96 bg-petroleum-card rounded-2xl border border-petroleum-border flex flex-col items-center justify-center p-8 text-center relative">
+                <span class="font-mono text-xs text-acid mb-2">[ ECOSYSTEM OVERVIEW / ALWAYS ON ]</span>
+                <h3 class="font-futura font-bold text-3xl text-white">Estrategia Continua de Marca</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">01. Concepto Estratégico</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Supervisión y evolución constante de la línea gráfica para mantener la frescura de marca.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">02. Despliegue de Piezas</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Producción mensual de contenidos para blog, newsletters, redes sociales y comunicaciones corporativas.</p>
+                </div>
+                <div class="bg-petroleum-dark p-6 rounded-2xl border border-petroleum-border space-y-3">
+                    <h4 class="font-futura font-bold text-lg text-acid">03. Resultados</h4>
+                    <p class="text-sm text-lightGrey leading-relaxed">Consolidación de una identidad visual sólida y altamente reconocible a largo plazo.</p>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center pt-8 border-t border-petroleum-border font-mono text-xs">
+                <a href="#campana-7" class="text-lightGrey hover:text-acid">← CAMPAÑA 7</a>
+                <a href="#campana-1" class="text-acid hover:text-white">CAMPAÑA 1 →</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-petroleum-border bg-petroleum-deep py-8 px-6 mt-12">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-mono text-lightGrey">
+            <p>DIRECTORA DE ARTE — ESTRATEGIA Y DIRECCIÓN CREATIVA</p>
+            <p>© 2026 ALL RIGHTS RESERVED</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mapeo de rutas (hash) a IDs de sección
+        const routes = {
+            '': 'sec-campana',
+            'campana': 'sec-campana',
+            'sobre-mi': 'sec-sobre-mi',
+            'contacto': 'sec-contacto',
+            'dame-mas': 'sec-dame-mas',
+            'campana-1': 'sec-campana-1',
+            'campana-2': 'sec-campana-2',
+            'campana-3': 'sec-campana-3',
+            'campana-4': 'sec-campana-4',
+            'campana-5': 'sec-campana-5',
+            'campana-6': 'sec-campana-6',
+            'campana-7': 'sec-campana-7',
+            'campana-8': 'sec-campana-8'
+        };
+
+        // Función principal de navegación
+        function handleRouting() {
+            // Obtener el hash actual de la URL sin el símbolo #
+            const hash = window.location.hash.replace('#', '');
+            
+            // Determinar la sección a mostrar
+            const targetSectionId = routes[hash] || 'sec-campana';
+
+            // Ocultar todas las secciones
+            const sections = document.querySelectorAll('.app-section');
+            sections.forEach(sec => {
+                sec.classList.remove('active-section');
+            });
+
+            // Mostrar la sección activa
+            const activeSection = document.getElementById(targetSectionId);
+            if (activeSection) {
+                activeSection.classList.add('active-section');
+            }
+
+            // Actualizar estado activo en el menú de navegación
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                const navKey = link.getAttribute('data-nav');
+                if (navKey && (hash === navKey || (hash === '' && navKey === 'campana'))) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+
+            // Reset de scroll al inicio de la página
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Eventos para detectar cambios en la URL o carga inicial
+        window.addEventListener('hashchange', handleRouting);
+        window.addEventListener('DOMContentLoaded', handleRouting);
+    </script>
+</body>
+</html>
